@@ -1,0 +1,6 @@
+{
+  "name": "FUTBOLCUM",
+  "description": "A premium, high-fidelity football talent discovery and networking platform. Connecting players, scouts, and clubs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

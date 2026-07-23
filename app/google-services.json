@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "857086107854",
+    "firebase_url": "https://futbolcubul-tr-default-rtdb.firebaseio.com",
+    "project_id": "futbolcubul-tr",
+    "storage_bucket": "futbolcubul-tr.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857086107854:android:971200fe84ae9feb85309f",
+        "android_client_info": {
+          "package_name": "com.aistudio.futbolcubul.wqhvmy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfHxRYjwreobw7Oe3x2MPbBrRUUMkgLEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

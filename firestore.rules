@@ -1,0 +1,92 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'ADMIN') ||
+        request.auth.token.admin == true
+      );
+    }
+
+    // Users Collection
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated()
+        && isOwner(userId)
+        && (!('role' in request.resource.data)
+            || request.resource.data.role != 'ADMIN');
+      allow update: if isAuthenticated() && (isAdmin() || (isOwner(userId) && (!('role' in request.resource.data) || request.resource.data.role == resource.data.role)));
+      allow delete: if isAuthenticated() && isAdmin();
+    }
+
+    // Players Collection
+    match /players/{playerId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && isOwner(playerId);
+      allow update: if isAuthenticated() && (isOwner(playerId) || isAdmin());
+      allow delete: if isAuthenticated() && isAdmin();
+    }
+
+    // Clubs Collection
+    match /clubs/{clubId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && isOwner(clubId);
+      allow update: if isAuthenticated() && (isOwner(clubId) || isAdmin());
+      allow delete: if isAuthenticated() && isAdmin();
+    }
+
+    // Tournaments Collection
+    match /tournaments/{tournamentId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && isAdmin();
+      allow delete: if isAuthenticated() && isAdmin();
+      allow update: if isAuthenticated() && (isAdmin() || request.resource.data.participantsCount == resource.data.participantsCount + 1 || request.resource.data.participantsCount == resource.data.participantsCount);
+    }
+
+    // Chats & Messages
+    match /chats/{chatId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // Notifications
+    match /notifications/{notificationId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Activities
+    match /activities/{activityId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated() || isAdmin();
+      allow delete: if isAuthenticated() && isAdmin();
+    }
+
+    // Follows Collection
+    match /follows/{followId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // Likes Collection
+    match /likes/{likeId} {
+      allow read, write: if isAuthenticated();
+    }
+
+    // Applications Collection
+    match /applications/{applicationId} {
+      allow read, write: if isAuthenticated();
+    }
+  }
+}

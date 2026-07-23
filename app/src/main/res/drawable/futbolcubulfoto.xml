@@ -1,0 +1,94 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="256dp"
+    android:height="256dp"
+    android:viewportWidth="256"
+    android:viewportHeight="256">
+
+    <!-- Dark Futuristic Rounded Background -->
+    <path
+        android:fillColor="#0B0E14"
+        android:pathData="M48,0h160c26.5,0 48,21.5 48,48v160c0,26.5 -21.5,48 -48,48H48C21.5,256 0,234.5 0,208V48C0,21.5 21.5,0 48,0z" />
+
+    <!-- Outer Cyan Glow Ring -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="2"
+        android:strokeAlpha="0.15"
+        android:pathData="M128,16 C190,16 240,66 240,128 C240,190 190,240 128,240 C66,240 16,190 16,128 C16,66 66,16 128,16 Z" />
+
+    <!-- Inner Bright Cyan Ring -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="4"
+        android:strokeAlpha="0.8"
+        android:pathData="M128,32 C181,32 224,75 224,128 C224,181 181,224 128,224 C75,224 32,181 32,128 C32,75 75,32 128,32 Z" />
+
+    <!-- Modern Abstract Tech Hexagon Lines -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="1.5"
+        android:strokeAlpha="0.3"
+        android:pathData="M128,40 L204,84 L204,172 L128,216 L52,172 L52,84 Z" />
+
+    <!-- Glowing Soccer Pentagons and Hexagons -->
+    <!-- Center Pentagon (Solid Glowing Neon) -->
+    <path
+        android:fillColor="#00F0FF"
+        android:fillAlpha="0.9"
+        android:pathData="M128,100 L152,118 L143,147 L113,147 L104,118 Z" />
+
+    <!-- Outer Connecting Lines -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="3.5"
+        android:strokeAlpha="0.9"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M128,100 L128,70
+                         M152,118 L180,109
+                         M143,147 L162,174
+                         M113,147 L94,174
+                         M104,118 L76,109" />
+
+    <!-- Surrounding Panels -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="3"
+        android:strokeAlpha="0.9"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M102,54 L128,70 L154,54 L180,109 L204,128 L162,174 L128,198 L94,174 L52,128 L80,109 Z" />
+
+    <!-- Dynamic Tech Accent Dots -->
+    <path
+        android:fillColor="#00F0FF"
+        android:fillAlpha="0.8"
+        android:pathData="M128,20 A4,4 0,1,1 128,28 A4,4 0,1,1 128,20 Z" />
+    <path
+        android:fillColor="#00F0FF"
+        android:fillAlpha="0.8"
+        android:pathData="M220,128 A4,4 0,1,1 228,128 A4,4 0,1,1 220,128 Z" />
+    <path
+        android:fillColor="#00F0FF"
+        android:fillAlpha="0.8"
+        android:pathData="M128,228 A4,4 0,1,1 128,236 A4,4 0,1,1 128,228 Z" />
+    <path
+        android:fillColor="#00F0FF"
+        android:fillAlpha="0.8"
+        android:pathData="M28,128 A4,4 0,1,1 36,128 A4,4 0,1,1 28,128 Z" />
+
+    <!-- Elegant Stars at the Top (Scouting/Championship motif) -->
+    <path
+        android:fillColor="#00F0FF"
+        android:fillAlpha="0.95"
+        android:pathData="M128,79 L130,84 L135,84 L131,88 L133,93 L128,90 L123,93 L125,88 L121,84 L126,84 Z" />
+    <path
+        android:fillColor="#00F0FF"
+        android:fillAlpha="0.5"
+        android:pathData="M106,84 L107,88 L111,88 L108,91 L109,95 L106,93 L103,95 L104,91 L101,88 L105,88 Z" />
+    <path
+        android:fillColor="#00F0FF"
+        android:fillAlpha="0.5"
+        android:pathData="M150,84 L151,88 L155,88 L152,91 L153,95 L150,93 L147,95 L148,91 L145,88 L149,88 Z" />
+
+</vector>

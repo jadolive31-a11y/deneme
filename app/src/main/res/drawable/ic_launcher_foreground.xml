@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Soccer ball base circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,24 A30,30 0 1,1 53.9,24 Z" />
+        
+    <!-- Soccer ball pattern (Pentagons and lines) -->
+    <!-- Center pentagon -->
+    <path
+        android:fillColor="#0D0E11"
+        android:pathData="M54,44 L64,51 L60,63 L48,63 L44,51 Z" />
+        
+    <!-- Top line and pentagon fragment -->
+    <path
+        android:strokeColor="#0D0E11"
+        android:strokeWidth="2"
+        android:pathData="M54,44 L54,24" />
+    <path
+        android:fillColor="#0D0E11"
+        android:pathData="M48,24 L60,24 L54,34 Z" />
+        
+    <!-- Bottom-left line and pentagon fragment -->
+    <path
+        android:strokeColor="#0D0E11"
+        android:strokeWidth="2"
+        android:pathData="M44,51 L26,45" />
+    <path
+        android:fillColor="#0D0E11"
+        android:pathData="M24,38 L28,50 L19,44 Z" />
+        
+    <!-- Bottom-right line and pentagon fragment -->
+    <path
+        android:strokeColor="#0D0E11"
+        android:strokeWidth="2"
+        android:pathData="M64,51 L82,45" />
+    <path
+        android:fillColor="#0D0E11"
+        android:pathData="M84,38 L80,50 L89,44 Z" />
+        
+    <!-- Bottom line and pentagon fragment -->
+    <path
+        android:strokeColor="#0D0E11"
+        android:strokeWidth="2"
+        android:pathData="M48,63 L40,78" />
+    <path
+        android:strokeColor="#0D0E11"
+        android:strokeWidth="2"
+        android:pathData="M60,63 L68,78" />
+    <path
+        android:fillColor="#0D0E11"
+        android:pathData="M46,84 L62,84 L54,76 Z" />
+        
+    <!-- Connecting outline lines of the ball panels -->
+    <path
+        android:strokeColor="#0D0E11"
+        android:strokeWidth="2"
+        android:pathData="M48,24 L44,34 L28,34 L26,45 M60,24 L64,34 L80,34 L82,45 M19,44 L28,50 L34,65 L40,78 M89,44 L80,50 L74,65 L68,78 M40,78 L54,76 L68,78" />
+        
+    <!-- Outer thick stroke for premium contrast -->
+    <path
+        android:strokeColor="#0D0E11"
+        android:strokeWidth="3"
+        android:pathData="M54,24 A30,30 0 1,1 53.9,24 Z" />
+        
+</vector>
